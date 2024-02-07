@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Number</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <style>
+    body {
+      background-color: rgb(181, 181, 181);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .container {
+      margin-top: 10px;
+    }
+    .card {
+      border: 2px solid #007bff; /* Blue border */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .card-header {
+      background-color: #007bff; /* Blue header background */
+      color: white;
+    }
+    .form {
+      padding: 0px;
+    }
+    .resultPara {
+      border-top: 2px solid #007bff; /* Blue border at the top of the result section */
+      padding: 20px;
+    }
+    #guessFeild {
+      width: 50%;
+      margin: 0 auto;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="mb-0">Number Guessing Game</h2>
+      </div>
+      <div class="card-body">
+        <p class="lead">Try and Guess a random number between 1 and 100</p>
+        <p class="lead">You have only 10 attempts</p>
+
+        <form class="form">
+          <div class="form-group">
+            <!-- <label for="guessFeild">Guess a number</label> -->
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              id="guessFeild"
+              placeholder="Enter your guess"
+            />
+          </div>
+          <button type="submit" id="submit" class="btn btn-primary">
+            Submit Guess
+          </button>
+        </form>
+<br>
+        <div class="resultPara">
+          <h3 class="lead ">Previous Guess: <span class="guesses badge badge-dark"></span></h3>
+          <h3 class="lead">
+            Remaining Guess:
+            <span class="lastResult badge badge-info">10</span>
+          </h3>
+          <h3 class="lead lowOrHi"></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="index.js"></script>
+</body>
+</html>
